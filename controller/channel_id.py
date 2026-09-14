@@ -17,6 +17,7 @@ def channel_id(username: str, api_key, url) -> str:
             print("no channels")
         else:
             # channel_id = data["items"][0]["id"]
+            # print(data["items"][0]["id"])
             playlist_id = data["items"][0]["contentDetails"]["relatedPlaylists"][
                 "uploads"
             ]
