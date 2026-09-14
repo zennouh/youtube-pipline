@@ -6,7 +6,7 @@ def channel_id(username: str, api_key, url) -> str:
     params = {
         "key": api_key,
         "part": "contentDetails",
-        "forUsername": username.replace("@", ""),
+        "forHandle": username,
         "maxResults": 1,
     }
 
@@ -16,7 +16,10 @@ def channel_id(username: str, api_key, url) -> str:
         if data["pageInfo"]["totalResults"] == 0:
             print("no channels")
         else:
-            channel_id = data["items"][0]["id"]
-            return channel_id
+            # channel_id = data["items"][0]["id"]
+            playlist_id = data["items"][0]["contentDetails"]["relatedPlaylists"][
+                "uploads"
+            ]
+            return playlist_id
     else:
         raise Exception("Something wrong: ")
