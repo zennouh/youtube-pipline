@@ -11,6 +11,7 @@ def channel_id(username: str, api_key, url) -> str:
     }
 
     response: req.Response = req.get(url, params=params)
+    response.raise_for_status()
     if response.status_code == 200:
         data = response.json()
         if data["pageInfo"]["totalResults"] == 0:
@@ -22,5 +23,3 @@ def channel_id(username: str, api_key, url) -> str:
                 "uploads"
             ]
             return playlist_id
-    else:
-        raise Exception("Something wrong: ")

@@ -1,5 +1,7 @@
 import requests as req
 
+Max_VIDEOS = 110
+
 
 def get_videos_ids(playlist_id, url, api_key) -> list[str]:
     vidoes_ids = []
@@ -20,6 +22,8 @@ def get_videos_ids(playlist_id, url, api_key) -> list[str]:
 
         data = response.json()
         vidoes_ids.extend([i["contentDetails"]["videoId"] for i in data["items"]])
+        if len(vidoes_ids) >= Max_VIDEOS:
+            break
         token = data.get("nextPageToken")
         if not token:
             break

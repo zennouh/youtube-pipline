@@ -1,7 +1,7 @@
 import os
 from dotenv import load_dotenv
-import app
-import models as md
+import src.app as app
+import src.models as md
 
 
 def main(username):
@@ -15,7 +15,8 @@ def main(username):
     config = md.Config.create(CHANNEL_URL, Videos_URL, videoInfoUrl, API_KEY)
 
     # app.Application(username, api_key=API_KEY, url=CHANNEL_URL)
-    app.Application(username, config)
+    application = app.Application()
+    application.start(username, config)
 
 
-main("@RaeedXA")
+main("@MrBeast")
