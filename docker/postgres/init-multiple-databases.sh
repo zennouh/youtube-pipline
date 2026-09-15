@@ -3,41 +3,33 @@
 set -e
 set -u
 
-function create_database_if_not_exists() {
+function create_user_and_database() {
     local database=$1
     local username=$2
+    local password=$3
+    echo "Ensuring user '$username' and database '$database' exist"
 
-    echo "Ensuring database '$database' exists (owned by '$username')"
-
-    psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
-        SELECT 'CREATE DATABASE "$database"'
-        WHERE NOT EXISTS (SELECT FROM pg_database WHERE datname = '$database')\gexec
+    if ! psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" -tAc "SELECT 1 FROM pg_roles WHERE rolname = '$username'" | grep -q 1; then
+        psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
+            CREATE USER "$username" WITH PASSWORD '$password';
 EOSQL
+    fi
 
-    psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" <<-EOSQL
-        GRANT ALL PRIVILEGES ON DATABASE "$database" TO "$username";
-EOSQL
+    if ! psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" -tAc "SELECT 1 FROM pg_database WHERE datname = '$database'" | grep -q 1; then
+        psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" -c "CREATE DATABASE \"$database\""
+    fi
 
-    echo "  Database '$database' is ready"
+    psql -v ON_ERROR_STOP=1 --username "$POSTGRES_USER" -c "GRANT ALL PRIVILEGES ON DATABASE \"$database\" TO \"$username\""
+    echo "  User '$username' and database '$database' are ready"
 }
 
-# Collect (database,username) pairs, then dedupe by database name
-declare -A seen_databases
+# Metadata database
+create_user_and_database $METADATA_DATABASE_NAME $METADATA_DATABASE_USERNAME $METADATA_DATABASE_PASSWORD
 
-for pair in \
-    "$METADATA_DATABASE_NAME:$METADATA_DATABASE_USERNAME" \
-    "$CELERY_BACKEND_NAME:$CELERY_BACKEND_USERNAME" \
-    "$ELT_DATABASE_NAME:$ELT_DATABASE_USERNAME"
-do
-    db="${pair%%:*}"
-    user="${pair##*:}"
+# Celery result backend database
+create_user_and_database $CELERY_BACKEND_NAME $CELERY_BACKEND_USERNAME $CELERY_BACKEND_PASSWORD
 
-    if [[ -z "${seen_databases[$db]:-}" ]]; then
-        create_database_if_not_exists "$db" "$user"
-        seen_databases[$db]=1
-    else
-        echo "Skipping '$db' - already created in this run"
-    fi
-done
+# ELT database
+create_user_and_database $ELT_DATABASE_NAME $ELT_DATABASE_USERNAME $ELT_DATABASE_PASSWORD
 
-echo "All databases created successfully"
+echo "All databases and users created successfully"

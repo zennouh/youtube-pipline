@@ -2,9 +2,11 @@ import os
 from dotenv import load_dotenv
 import src.app as app
 import src.models as md
+import src.database as db
 
 
 def main(username):
+    db.create_tables()
     load_dotenv()
 
     API_KEY = os.getenv("API_KEY")
@@ -14,7 +16,6 @@ def main(username):
 
     config = md.Config.create(CHANNEL_URL, Videos_URL, videoInfoUrl, API_KEY)
 
-    # app.Application(username, api_key=API_KEY, url=CHANNEL_URL)
     application = app.Application()
     application.start(username, config)
 

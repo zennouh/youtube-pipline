@@ -44,7 +44,9 @@ x-airflow-common:
     - ./data:/opt/airflow/data
     - ./include:/opt/airflow/include
     - ./logs:/opt/airflow/logs
+    - ./main.py:/opt/airflow/main.py
     - ./plugins:/opt/airflow/plugins
+    - ./src:/opt/airflow/src
     - ./tests:/opt/airflow/tests
   user: "${AIRFLOW_UID}:0"
   depends_on:
