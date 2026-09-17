@@ -4,7 +4,6 @@ on:
   push:
     branches: [cicd]
 
-
 jobs:
   ci:
     runs-on: ubuntu-latest
@@ -14,4 +13,3 @@ jobs:
 
       - name: run test
         run: python -m tests/clean_test.py -v
-          

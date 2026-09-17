@@ -2344,3 +2344,73 @@
 [2026-09-17T13:42:58.845+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:42:58.844+0000] {dag.py:3096} INFO - Sync 1 DAGs
 [2026-09-17T13:42:58.861+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:42:58.861+0000] {dag.py:3954} INFO - Setting next_dagrun for save_data to None, run_after=None
 [2026-09-17T13:42:58.897+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/stoke_dag.py took 0.132 seconds
+[2026-09-17T13:43:29.125+0000] {processor.py:161} INFO - Started process (PID=1539) to work on /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:43:29.128+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/stoke_dag.py for tasks to queue
+[2026-09-17T13:43:29.132+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:43:29.131+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:43:29.172+0000] {processor.py:840} INFO - DAG(s) 'save_data' retrieved from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:43:29.215+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:43:29.215+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-09-17T13:43:29.240+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:43:29.239+0000] {dag.py:3954} INFO - Setting next_dagrun for save_data to None, run_after=None
+[2026-09-17T13:43:29.281+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/stoke_dag.py took 0.171 seconds
+[2026-09-17T13:43:59.412+0000] {processor.py:161} INFO - Started process (PID=1548) to work on /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:43:59.415+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/stoke_dag.py for tasks to queue
+[2026-09-17T13:43:59.420+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:43:59.419+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:43:59.455+0000] {processor.py:840} INFO - DAG(s) 'save_data' retrieved from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:43:59.509+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:43:59.509+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-09-17T13:43:59.532+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:43:59.532+0000] {dag.py:3954} INFO - Setting next_dagrun for save_data to None, run_after=None
+[2026-09-17T13:43:59.569+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/stoke_dag.py took 0.169 seconds
+[2026-09-17T13:44:29.974+0000] {processor.py:161} INFO - Started process (PID=1557) to work on /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:44:29.976+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/stoke_dag.py for tasks to queue
+[2026-09-17T13:44:29.980+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:44:29.978+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:44:30.012+0000] {processor.py:840} INFO - DAG(s) 'save_data' retrieved from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:44:30.063+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:44:30.062+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-09-17T13:44:30.107+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:44:30.106+0000] {dag.py:3954} INFO - Setting next_dagrun for save_data to None, run_after=None
+[2026-09-17T13:44:30.162+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/stoke_dag.py took 0.200 seconds
+[2026-09-17T13:45:00.311+0000] {processor.py:161} INFO - Started process (PID=1566) to work on /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:45:00.313+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/stoke_dag.py for tasks to queue
+[2026-09-17T13:45:00.316+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:45:00.316+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:45:00.352+0000] {processor.py:840} INFO - DAG(s) 'save_data' retrieved from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:45:00.384+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:45:00.384+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-09-17T13:45:00.398+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:45:00.398+0000] {dag.py:3954} INFO - Setting next_dagrun for save_data to None, run_after=None
+[2026-09-17T13:45:00.422+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/stoke_dag.py took 0.121 seconds
+[2026-09-17T13:45:30.775+0000] {processor.py:161} INFO - Started process (PID=1575) to work on /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:45:30.778+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/stoke_dag.py for tasks to queue
+[2026-09-17T13:45:30.781+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:45:30.780+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:45:30.801+0000] {processor.py:840} INFO - DAG(s) 'save_data' retrieved from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:45:30.831+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:45:30.830+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-09-17T13:45:30.845+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:45:30.845+0000] {dag.py:3954} INFO - Setting next_dagrun for save_data to None, run_after=None
+[2026-09-17T13:45:30.870+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/stoke_dag.py took 0.104 seconds
+[2026-09-17T13:46:01.392+0000] {processor.py:161} INFO - Started process (PID=1584) to work on /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:46:01.394+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/stoke_dag.py for tasks to queue
+[2026-09-17T13:46:01.398+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:46:01.397+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:46:01.441+0000] {processor.py:840} INFO - DAG(s) 'save_data' retrieved from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:46:01.475+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:46:01.475+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-09-17T13:46:01.506+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:46:01.505+0000] {dag.py:3954} INFO - Setting next_dagrun for save_data to None, run_after=None
+[2026-09-17T13:46:01.545+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/stoke_dag.py took 0.163 seconds
+[2026-09-17T13:46:31.952+0000] {processor.py:161} INFO - Started process (PID=1593) to work on /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:46:31.953+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/stoke_dag.py for tasks to queue
+[2026-09-17T13:46:31.955+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:46:31.955+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:46:31.983+0000] {processor.py:840} INFO - DAG(s) 'save_data' retrieved from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:46:32.008+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:46:32.008+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-09-17T13:46:32.022+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:46:32.022+0000] {dag.py:3954} INFO - Setting next_dagrun for save_data to None, run_after=None
+[2026-09-17T13:46:32.046+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/stoke_dag.py took 0.102 seconds
+[2026-09-17T13:47:02.369+0000] {processor.py:161} INFO - Started process (PID=1602) to work on /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:47:02.370+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/stoke_dag.py for tasks to queue
+[2026-09-17T13:47:02.373+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:47:02.372+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:47:02.395+0000] {processor.py:840} INFO - DAG(s) 'save_data' retrieved from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:47:02.419+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:47:02.419+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-09-17T13:47:02.430+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:47:02.430+0000] {dag.py:3954} INFO - Setting next_dagrun for save_data to None, run_after=None
+[2026-09-17T13:47:02.449+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/stoke_dag.py took 0.087 seconds
+[2026-09-17T13:47:32.782+0000] {processor.py:161} INFO - Started process (PID=1611) to work on /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:47:32.783+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/stoke_dag.py for tasks to queue
+[2026-09-17T13:47:32.785+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:47:32.785+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:47:32.808+0000] {processor.py:840} INFO - DAG(s) 'save_data' retrieved from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:47:32.835+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:47:32.835+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-09-17T13:47:32.848+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:47:32.848+0000] {dag.py:3954} INFO - Setting next_dagrun for save_data to None, run_after=None
+[2026-09-17T13:47:32.873+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/stoke_dag.py took 0.101 seconds
+[2026-09-17T13:48:03.020+0000] {processor.py:161} INFO - Started process (PID=1620) to work on /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:48:03.022+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/stoke_dag.py for tasks to queue
+[2026-09-17T13:48:03.024+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:48:03.024+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:48:03.048+0000] {processor.py:840} INFO - DAG(s) 'save_data' retrieved from /opt/airflow/dags/stoke_dag.py
+[2026-09-17T13:48:03.072+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:48:03.072+0000] {dag.py:3096} INFO - Sync 1 DAGs
+[2026-09-17T13:48:03.085+0000] {logging_mixin.py:188} INFO - [2026-09-17T13:48:03.085+0000] {dag.py:3954} INFO - Setting next_dagrun for save_data to None, run_after=None
+[2026-09-17T13:48:03.117+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/stoke_dag.py took 0.103 seconds
