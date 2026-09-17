@@ -17,8 +17,7 @@ jobs:
           python-version: "3.14.7"
 
       - name: install dependencies
-        run: /
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
           
       - name: run test
         run: python -m tests/clean_test.py -v
