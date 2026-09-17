@@ -20,5 +20,5 @@ jobs:
         run: pip install -r requirements.txt
           
       - name: run test
-        run: python -m tests/clean_test.py -v
+        run: python -m tests/clean_test -v
 
