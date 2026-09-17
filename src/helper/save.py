@@ -41,7 +41,6 @@ def save_in_core_from_stage():
         total_videos_stage = se.scalar(select(func.count(Stage.video_id)))
 
         if total_videos_core > total_videos_stage:
-            print("here")
             stmt_stage = select(Stage.video_id)
             ids_stage = se.scalars(stmt_stage).all()
 

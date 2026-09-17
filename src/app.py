@@ -10,6 +10,10 @@ import datetime as dt
 
 class Application:
 
+    def __init__(self,username, config: md.Config):
+        self.username = username
+        self.config = config
+
     def read_from_json(self):
         json_name = dt.datetime.now().date()
         path = Path(f"./src/assets/{json_name}.json")
@@ -19,7 +23,6 @@ class Application:
 
     def save_in_stage(self, vs):
         hl.save_in_stage_db(vs)
-        return True
 
     def save_in_core(self):
         hl.save_in_core_from_stage()
@@ -36,27 +39,38 @@ class Application:
             self.save_in_stage(videos)
             self.save_in_core()
         else:
-            self.get_all_videos(username, config)
+            # dag one
+            #   task one
+            extacted_videos=self.get_all_videos(username, config)
+            #   task two
+            self.save_in_json(extacted_videos)
+
+
+            # dag two
+            #   task one
             videos = self.read_from_json()
-            self.save_in_json(videos)
+            #   task two
             self.save_in_stage(videos)
+            #   task tree
             self.save_in_core()
 
-    def get_all_videos(self, username, config: md.Config):
+    def get_all_videos(self)-> list:
         try:
             videos_list = []
             play_list_id = clt.channel_id(
-                username, api_key=config.apiKey, url=config.channelUrl
+                self.username, api_key=self.config.apiKey,
+                  url=self.config.channelUrl
             )
             ids = clt.get_videos_ids(
                 play_list_id,
-                config.videoUrl,
-                config.apiKey,
+                self.config.videoUrl,
+                self.config.apiKey,
             )
             print("Start loading informations")
             for id in ids:
                 try:
-                    video = clt.get_video_info(id, config.videoInfoUrl, config.apiKey)
+                    video = clt.get_video_info(id, self.config.videoInfoUrl,
+                                                self.config.apiKey)
                     videos_list.append(video)
 
                     total = len(ids)
@@ -72,7 +86,7 @@ class Application:
                     continue
             # hl.create_json(videos_list)
             print("Done")
-            # return videos_list
+            return videos_list
 
         except Exception as e:
             print("error is: ", e)
