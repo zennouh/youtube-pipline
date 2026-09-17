@@ -11,7 +11,6 @@ def clean_data(data):
     df["views"] = pd.to_numeric(df["views"], errors="coerce")
     df["likes"] = pd.to_numeric(df["likes"], errors="coerce")
     df["comments"] = pd.to_numeric(df["comments"], errors="coerce")
-    # print(df[0].to_dict())
     return df.to_dict(orient="records")[0]
 
 
