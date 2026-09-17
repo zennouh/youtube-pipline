@@ -1,0 +1,34 @@
+[2026-09-17T09:16:57.926+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-17T09:16:57.954+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: json_dag.to_json scheduled__2026-09-17T08:58:00+00:00 [queued]>
+[2026-09-17T09:16:57.968+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: json_dag.to_json scheduled__2026-09-17T08:58:00+00:00 [queued]>
+[2026-09-17T09:16:57.971+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-17T09:16:57.995+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): to_json> on 2026-09-17 08:58:00+00:00
+[2026-09-17T09:16:58.001+0000] {standard_task_runner.py:63} INFO - Started process 114 to run task
+[2026-09-17T09:16:58.005+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'json_dag', 'to_json', 'scheduled__2026-09-17T08:58:00+00:00', '--job-id', '37', '--raw', '--subdir', 'DAGS_FOLDER/json_dag.py', '--cfg-path', '/tmp/tmp8xzbtg1a']
+[2026-09-17T09:16:58.008+0000] {standard_task_runner.py:91} INFO - Job 37: Subtask to_json
+[2026-09-17T09:16:58.066+0000] {task_command.py:426} INFO - Running <TaskInstance: json_dag.to_json scheduled__2026-09-17T08:58:00+00:00 [running]> on host 5c1b3b777c76
+[2026-09-17T09:16:58.168+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='json_dag' AIRFLOW_CTX_TASK_ID='to_json' AIRFLOW_CTX_EXECUTION_DATE='2026-09-17T08:58:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-09-17T08:58:00+00:00'
+[2026-09-17T09:16:58.170+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-17T09:16:58.177+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-09-17T09:16:58.177+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-17T09:16:58.187+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=json_dag, task_id=to_json, run_id=scheduled__2026-09-17T08:58:00+00:00, execution_date=20260917T085800, start_date=20260917T091657, end_date=20260917T091658
+[2026-09-17T09:16:58.219+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-09-17T09:16:58.235+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-17T09:16:58.240+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
+[2026-09-17T10:57:32.876+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2026-09-17T10:57:32.896+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: json_dag.to_json scheduled__2026-09-17T08:58:00+00:00 [queued]>
+[2026-09-17T10:57:32.903+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: json_dag.to_json scheduled__2026-09-17T08:58:00+00:00 [queued]>
+[2026-09-17T10:57:32.904+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2026-09-17T10:57:32.920+0000] {taskinstance.py:2330} INFO - Executing <Task(_PythonDecoratedOperator): to_json> on 2026-09-17 08:58:00+00:00
+[2026-09-17T10:57:32.926+0000] {standard_task_runner.py:63} INFO - Started process 254 to run task
+[2026-09-17T10:57:32.932+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'json_dag', 'to_json', 'scheduled__2026-09-17T08:58:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/json_dag.py', '--cfg-path', '/tmp/tmp2bz33gj6']
+[2026-09-17T10:57:32.936+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask to_json
+[2026-09-17T10:57:33.008+0000] {task_command.py:426} INFO - Running <TaskInstance: json_dag.to_json scheduled__2026-09-17T08:58:00+00:00 [running]> on host 016b70ca759a
+[2026-09-17T10:57:33.106+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='json_dag' AIRFLOW_CTX_TASK_ID='to_json' AIRFLOW_CTX_EXECUTION_DATE='2026-09-17T08:58:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2026-09-17T08:58:00+00:00'
+[2026-09-17T10:57:33.107+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2026-09-17T10:57:33.115+0000] {python.py:237} INFO - Done. Returned value was: None
+[2026-09-17T10:57:33.116+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2026-09-17T10:57:33.128+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=json_dag, task_id=to_json, run_id=scheduled__2026-09-17T08:58:00+00:00, execution_date=20260917T085800, start_date=20260917T105732, end_date=20260917T105733
+[2026-09-17T10:57:33.185+0000] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2026-09-17T10:57:33.208+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2026-09-17T10:57:33.213+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
